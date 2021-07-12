@@ -26,21 +26,19 @@ app.use(bodyParser.urlencoded({
 
 
 // set port
-app.listen(3000, function () {
-    console.log('Node app is running on port 3000');
-});
+app.listen(process.env.PORT || 8080); 
 module.exports = app;
 
 
-// connection configurations
+/* connection configurations
 var dbConn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
   database: 'edocs'
-});
+});*/
 // connect to database
-dbConn.connect(); 
+//dbConn.connect(); 
 app.post('/sign', function (req, res) {
   var postData  = req.body;
   var pass= postData.Password;
