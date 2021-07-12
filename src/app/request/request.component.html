@@ -1,0 +1,75 @@
+<div class="b">
+
+<div  class="" style="width: 100%; box-shadow: 15px 15px 15px silver ;color: #830909">
+  <p id="movetxt">Life is in the Blood. </p>
+    
+</div>
+<div>
+   
+
+
+
+<h4 class="h">Eplore the World | {{sessionValue}}| {{declared.Email}}</h4>
+<br>
+<div class="maindiv">
+	
+	<div class="left">
+		<h6>Change Password</h6>
+		<button class="ap" (click)="goToP()" >Change Password</button>
+		<hr>
+		
+		
+
+	</div>
+	<div class="center"><div class="card-body">
+		<h3>Approve Recquisitions</h3>
+		<div class="card richy example-1 scrollbar-ripe-malinka bordered-deep-purple thin">
+  			<div *ngFor="let data of in">
+  				<p>Requestor:{{data.RequestedBy}} ({{data.DptFrom}})</p>
+      <p>Department To: {{data.DptTo}}</p>
+        <p>Date: {{data.Date | date:'dd-MM-yyyy'}}</p>
+          
+     
+		<table class="table table-striped w-auto">
+			<thead>
+			<tr>
+				<th>Description</th>
+				<th>Quantity</th>
+				<th>Comment</th>
+			</tr>
+			</thead>
+			<tr>
+				<td>{{data.Description}}</td>
+				<td>{{data.Quantity}}</td>
+				<td>{{data.Comment}}</td>			
+       
+			</tr>
+		</table>
+		<button class="ap" value="{{data.ID_Key}}" (click)="approve(data.ID_Key)" >Approve</button>
+		<br>
+		<code>-----end of request-------</code>
+		<hr>
+		<br>
+		</div>
+	</div>
+</div>
+
+	</div>
+	<div class="right">
+		<h6>Make a request</h6>
+		<button class="ap" (click)="goTOInternal()" >Internal Order</button>
+		<hr>
+		<button class="ap" (click)="goToPending()" >Pending    .</button><hr>
+		<button class="ap" (click)="goToIssue()" >Issue out</button>
+		<hr>
+
+		
+
+	</div>
+	
+</div>
+</div>
+<div class="footer">
+	<p class="h ah">@2020</p>
+	<p class="h">let's go digital</p>
+</div>

@@ -1,0 +1,59 @@
+<div class="b">
+<br>
+<div class="">
+</div>
+<div class="a">
+
+<mdb-card>
+
+  <mdb-card-header class="color-b white-text text-center py-4">
+    <h5>
+      <strong>Internal Order Items </strong>
+    </h5>
+    <h6>Order number {{r}}</h6>
+  </mdb-card-header>
+
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5">
+
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;"#userLogin="ngForm" (ngSubmit)="onClickSubmit()">
+
+      <p><code>Please in the following form </code></p>
+
+      <!-- Name -->
+      <div class="md-form mt-3">
+        <input type="text" name="Description" id="materialSubscriptionFormDes" class="form-control"  [(ngModel)]="declared.Description" mdbInput>
+        <label for="materialSubscriptionFormDes">Description</label>
+      </div>
+            <div class="md-form mt-3">
+        <input type="number" name="Quantity" id="materialSubscriptionFormAQua" class="form-control"  [(ngModel)]="declared.Quantity" mdbInput>
+        <label for="materialSubscriptionFormAQua">Quantity</label>
+      </div>
+            <!-- Name -->
+      <div class="md-form mt-3">
+        <input type="text" name="Comment" id="materialSubscriptionFormComment" class="form-control"  [(ngModel)]="declared.Comment" mdbInput>
+        <label for="materialSubscriptionFormComment">Comment</label>
+      </div>
+
+    
+
+      <!-- Sign in button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+        type="submit">Submit</button>
+              <!-- Sign in button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+        (click)="goTointernal()">New Order</button>
+
+    </form>
+    <!-- Form -->
+<p>Forgot Password? <a href="">Reset</a></p>
+  </mdb-card-body>
+
+</mdb-card>
+</div>
+</div>
+<div class="footer">
+  <p class="h ah">@2020</p>
+  <p class="h">let's go digital</p>
+</div>

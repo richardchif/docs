@@ -1,0 +1,51 @@
+<div class="b">
+<img style="width: 80px;height: 80px; margin-left: 45%;" src="./assets/NBSZ.png">
+
+
+<div class="a">
+
+<mdb-card >
+
+  <mdb-card-header class="color-b white-text text-center py-4">
+    <h5>
+      <strong>Online Requisitions</strong>
+    </h5>
+  </mdb-card-header>
+
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5" >
+
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;"#userLogin="ngForm" (ngSubmit)="onClickSubmit()">
+
+      <p>Please log in to make recquisitions, <code>easy and reliable.</code></p>
+
+      <p>
+        <a href="" target="_blank">No account.</a>
+      </p>
+
+      <!-- Name -->
+      <div class="md-form mt-3">
+        <input type="email" name="Email" id="materialSubscriptionFormUsername" class="form-control"  [(ngModel)]="declared.Email" mdbInput>
+        <label for="materialSubscriptionFormUsername">Username</label>
+      </div>
+
+      <!-- E-mai -->
+      <div class="md-form">
+        <input type="password" name="Password" id="materialSubscriptionFormPasswords" class="form-control"  [(ngModel)]="declared.Password" mdbInput>
+        <label for="materialSubscriptionFormPasswords">Password</label>
+              </div>
+
+      <!-- Sign in button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+        type="submit">Sign in</button>
+
+    </form>
+    <!-- Form -->
+<p>Forgot Password? <a href="">Reset</a></p>
+  </mdb-card-body>
+
+</mdb-card>
+</div>
+<br><br><br>
+</div>

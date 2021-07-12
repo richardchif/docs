@@ -1,0 +1,16 @@
+PrREQ
+install mysql xampp
+create a db in mysql called edocs then import the db named edocs DB which is in this folder.
+install node
+install angular cli
+install node mysql, express
+install nodemon
+
+
+1. This application was designed using angular,node js.
+2. To run the app, navigate into this folder using the terminal or cmd then type ng serve.
+3. open anpother cmd and also navigate to the folder this time around  we need to start node js so after entering in edocs older
+navigate into the folder named server using your command (cd server) ,then start node using node server.js or nodemon server
+4. by now Step number 2 should be done with the compiling process,,,,,, type localhost:4200 from your browser then enter login credentials from 
+that pic in this folder.
+

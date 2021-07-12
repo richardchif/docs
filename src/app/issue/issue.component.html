@@ -1,0 +1,140 @@
+
+<div style="background-color: silver">
+<div  class="" style="width: 100%; box-shadow: 15px 15px 15px silver ;color: #830909">
+  <p id="movetxt">Life is in the Blood </p>
+    
+</div>
+   
+
+
+
+<h4 class="h">Eplore the World | {{sessionValue}}| {{declared.Email}}</h4>
+<h5 class="h"> ISSUE OUT</h5>
+<br>
+<div class="maindiv">
+	
+	<div class="left">
+		<h6>Change Password</h6>
+		<button class="ap" (click)="goToP()" >Password</button>
+		<hr>
+	</div>
+	<div class="center"><div class="card-body">
+		<h3>Issue out</h3>
+		<div class="card richy example-1 scrollbar-ripe-malinka bordered-deep-purple thin">
+  			<div *ngFor="let data of in">
+  				<p>Requestor:{{data.RequestedBy}} ({{data.DptFrom}})</p>
+      <p>Department: {{data.DptTo}}</p>
+        <p>Date: {{data.Date | date:'dd-MM-yyyy'}}</p>
+          <p>Authorised By:{{data.AuthorisedBy}}</p>
+          
+     
+		<table class="table table-striped w-auto">
+			<thead>
+			<tr>
+				<th>Description</th>
+				<th>Quantity</th>
+				<th>Comment</th>
+			</tr>
+			</thead>
+			<tr>
+				<td>{{data.Description}}</td>
+				<td>{{data.Quantity}}</td>
+				<td>{{data.Comment}}</td>			
+       
+			</tr>
+		</table>
+		<!-- <button class="ap" type="hide" value="{{data.ID_Key}}" name="rich" (click)="issue(data.ID_Key)" >Issue</button>-->
+
+        <button type="button" class="ap" data-toggle="modal" data-target="#basicExample"
+                (click)="frame.show()" mdbWavesEffect>Issue Out
+        </button><br>
+
+        <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
+
+              <!--Header-->
+              <div class="modal-header">
+                <img src="./assets/NBSZ.png" alt="avatar"
+                     class="rounded-circle img-responsive">
+              </div>
+              <!--Body-->
+              <div class="modal-body mb-1">
+
+                <h5 class="mt-1 mb-2 text-center">Order Key</h5>
+                
+
+                <div class="md-form ml-0 mr-0">
+ 
+                  <input type="password" type="text" id="form29" name="Order" class="form-control form-control-sm ml-0"
+                         [(ngModel)]="declared.Order" mdbInput>
+                  <label for="form29" class="ml-0">Enter the order key</label>
+
+                </div>
+
+                <div class="text-center mt-4">
+                  <button mdbBtn color="cyan" rounded="true"value="{{data.ID_Key}}" type="submit" (click)="verify(data.ID_Key)" class="mt-1 waves-light" mdbWavesEffect>Check
+                    <mdb-icon fas icon="sign-in-alt"  class="ml-1"></mdb-icon>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+            <!--/.Content-->
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+		<button class="ap" value="{{data.ID_Key}}" (click)="issue(data.ID_Key)" >Reject</button>
+		<br>
+		<code>-----end of request-------</code>
+		<br>
+		</div>
+	</div>
+</div>
+
+	</div>
+	<div class="right">
+				<h6>Make a request</h6>
+		<button class="ap" (click)="goTOInternal()" >Internal Order</button>
+		<hr>
+		<button class="ap" (click)="goToPending()" >Pending    .</button><hr>
+		<button class="ap" (click)="goToIssue()" >Issue out</button>
+		<hr>
+
+	</div>
+	
+</div>
+</div>
+<div class="footer">
+	<p class="h ah">@2020</p>
+	<p class="h">let's go digital</p>
+</div>
+

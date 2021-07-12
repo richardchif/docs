@@ -1,0 +1,67 @@
+<div class="b">
+<br>
+<div class="">
+</div>
+<div class="a">
+
+<mdb-card style="opacity: 0.7">
+
+  <mdb-card-header class="color-b white-text text-center py-4">
+    <h5>
+      <strong>Internal Order</strong>
+    </h5>
+  </mdb-card-header>
+
+  <!--Card content-->
+  <mdb-card-body class="px-lg-5">
+
+    <!-- Form -->
+    <form class="text-center" style="color: #757575;"#userLogin="ngForm" (ngSubmit)="onClickSubmit()">
+
+      <p><code>Please fill in the following form </code></p>
+
+      <!-- Name -->
+      <div class="md-form mt-3">
+        <input type="text" name="RequestedBy" id="materialSubscriptionFormName" class="form-control"  [(ngModel)]="declared.RequestedBy" mdbInput>
+        <label for="materialSubscriptionFormname">Name(eg Emma Chimuti)</label>
+      </div>
+            <div class="md-form mt-3">
+        <input type="email" name="AuthorisedBy" id="materialSubscriptionFormAName" class="form-control"  [(ngModel)]="declared.AuthorisedBy" mdbInput>
+        <label for="materialSubscriptionFormAname">Authorisor's email</label>
+      </div>
+            <!-- Name -->
+      <div class="md-form mt-3">
+        <input type="text" name="DptFrom" id="materialSubscriptionFormDepartment" class="form-control"  [(ngModel)]="declared.DptFrom" mdbInput>
+        <label for="materialSubscriptionFormDepartment">Enter your department</label>
+      </div>
+          <div class="md-form mt-3">
+        <input type="text" name="DptTo" id="materialSubscriptionFormDepartmentTo" class="form-control"  [(ngModel)]="declared.DptTo" mdbInput>
+        <label for="materialSubscriptionFormDepartmentTo">Enter the receiving department</label>
+      </div>
+                <div class="md-form mt-3">
+        <input type="text" name="Branch" id="materialSubscriptionFormBranch" class="form-control"  [(ngModel)]="declared.Branch" mdbInput>
+        <label for="materialSubscriptionFormBranch">Branch</label>
+      </div>
+                <div class="md-form mt-3">
+        <input type="date" name="Date" id="materialSubscriptionFormR" class="form-control"  [(ngModel)]="declared.Date" mdbInput>
+        <label for="materialSubscriptionFormR">Date</label>
+      </div>
+
+    
+
+      <!-- Sign in button -->
+      <button mdbBtn color="info" outline="true" rounded="true" block="true" class="z-depth-0 my-4 waves-effect" mdbWavesEffect
+        type="submit">Submit</button>
+
+    </form>
+    <!-- Form -->
+<p>Forgot Password? <a href="">Reset</a></p>
+  </mdb-card-body>
+
+</mdb-card>
+</div>
+</div>
+<div class="footer">
+  <p class="h ah">@2020</p>
+  <p class="h">let's go digital</p>
+</div>
